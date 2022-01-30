@@ -85,9 +85,9 @@ class CardController extends Controller
             $numberTrace = $this->Game->getNumberTrace($card->game_id);
             $card = $this->buildCard($card);
             if($this->validateWinnerCardWithTraceNumber($card,$numberTrace)){
-                return success_api_response("The card_id ({$request['card_id']}) is a winner card", '');
+                return success_api_response("The card_id ({$request['card_id']}) is a winner card", true);
             }
-            return success_api_response("The card_id ({$request['card_id']}) is a losing card", '');
+            return success_api_response("The card_id ({$request['card_id']}) is a losing card", false);
 
         } catch (\Exception $e) {
             Log::error('ERROR: CardController::validateWinner ->' . json_encode($e));
