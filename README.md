@@ -35,7 +35,7 @@ Response:
 ### Validate winner
 Check winner cards
 ```
-POST -> /api/validate_winner
+GET -> /api/validate_winner
 ```
 
 Response:
