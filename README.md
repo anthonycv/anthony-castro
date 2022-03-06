@@ -37,6 +37,10 @@ Check winner cards
 ```
 GET -> /api/validate_winner
 ```
+Request:
+| Param   | Values                                                           |
+|---------|------------------------------------------------------------------|
+| card_id | (Integer) Card ID |
 
 Response:
 | Param   | Values                                                           |
